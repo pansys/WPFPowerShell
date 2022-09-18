@@ -1,0 +1,17 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Background="LightGray"
+        Title="WPF Custom PowerShell" Height="561" Width="1234"
+        FocusManager.FocusedElement="{Binding ElementName=tbCommands}" >
+    <Grid Margin="0,0,10,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbCommands" HorizontalAlignment="Left" Margin="16,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1184" Height="483" Text="WPF PS&gt;" Background="#FF1A1573" Foreground="White" SelectionBrush="#FF8E9294"/>
+
+    </Grid>
+</Window>
