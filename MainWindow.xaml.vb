@@ -11,7 +11,7 @@ Class MainWindow
     Dim prevCommandsPos As Integer = -1
     Dim prevKey As Key
 
-    Dim shellPrompt As String = "" '"WPF PS C:\Users\tech\source\repos\WPFPowerShellSample\bin\Debug\netcoreapp3.1>"
+    Dim shellPrompt As String = ""
 
     Public Sub New()
         InitializeComponent()
@@ -25,69 +25,6 @@ Class MainWindow
         tbCommands.Text = "WPF PS> "
         tbCommands.CaretIndex = tbCommands.Text.Length
         tbCommands.Focus()
-
-        'Debug.Print("WPFPowerShellSample : Executing PowerShell Command...")
-
-        'tbOutput.Text = ""
-
-        'Dim powershell As PowerShell = PowerShell.Create()
-        'powershell.AddScript(tbCommands.Text.Trim)
-        'powershell.AddScript("1..5 | % { Write-Progress -Activity 'My Important Activity' -PercentComplete ($PSItem*20) -Status 'This is my status'; Start-Sleep -Milliseconds 200; }")
-        'powershell.AddCommand("Out-String")
-        'AddHandler powershell.Streams.Progress.DataAdded, AddressOf ProcessOutput
-
-        ''Dim command As New PSCommand()
-        ''command.AddScript(tbCommands.Text.Trim)
-        ''command.AddCommand("Out-String")
-        ''powershell.Commands = command
-
-        'Try
-        '    'Dim results = powershell.Invoke()
-        '    'For Each item As PSObject In results
-        '    '    tbOutput.AppendText(item.ToString)
-        '    'Next
-        '    'powershell.Streams.Progress.Add(New ProgressRecord(5, "test", "test"))
-        '    powershell.Invoke()
-        'Catch ex As Exception
-        '    tbOutput.AppendText(ex.Message)
-        'End Try
-
-        'Try
-        '    Dim MyRunSpace As Runspace = RunspaceFactory.CreateRunspace()
-
-        '    ' open it 
-        '    MyRunSpace.Open()
-
-        '    ' create a pipeline and feed it the script text 
-        '    Dim MyPipeline As Pipeline = MyRunSpace.CreatePipeline()
-
-        '    MyPipeline.Commands.AddScript(tbCommands.Text.Trim)
-
-        '    ' add an extra command to transform the script output objects into nicely formatted strings 
-        '    ' remove this line to get the actual objects that the script returns. For example, the script 
-        '    ' "Get-Process" returns a collection of System.Diagnostics.Process instances. 
-        '    MyPipeline.Commands.Add("Out-String")
-
-        '    ' execute the script 
-        '    Dim results As Collection(Of PSObject) = MyPipeline.Invoke()
-
-        '    ' close the runspace 
-        '    MyRunSpace.Close()
-
-        '    ' convert the script result into a single string 
-        '    Dim MyStringBuilder As New StringBuilder()
-
-        '    For Each obj As PSObject In results
-        '        MyStringBuilder.AppendLine(obj.ToString())
-        '    Next
-
-        '    ' return the results of the script that has 
-        '    ' now been converted to text 
-        '    tbOutput.AppendText(MyStringBuilder.ToString())
-
-        'Catch ex As Exception
-        '    tbOutput.AppendText(ex.Message)
-        'End Try
     End Sub
 
     Private Sub ExecuteCommand()
