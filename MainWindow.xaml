@@ -5,12 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Background="LightGray"
-        Title="WPF Custom PowerShell" Height="561" Width="1234"
+        Title="WPF Custom PowerShell" Height="900" Width="1200"
         FocusManager.FocusedElement="{Binding ElementName=tbCommands}" >
-    <Grid Margin="0,0,10,2" Loaded="Grid_Loaded">
+    <Grid Margin="0,0,0,0" Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="First">
+                <Grid Background="#FF595454">
+                    <WindowsFormsHost x:Name="winFormsHost"  />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Second">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
