@@ -20,7 +20,7 @@ Class MainWindow
 
         Dim p As System.Diagnostics.Process = Process.Start(startInfo)
         'p.WaitForInputIdle() 'If this works below sleep is not required and embedding external window is quicker
-        Threading.Thread.Sleep(100) 'Change this to 100 to avoid poping up the external powershell
+        Threading.Thread.Sleep(1000) 'Change this to 100 to avoid poping up the external powershell
         'SetParent(p.MainWindowHandle, New WindowInteropHelper(Application.Current.MainWindow).Handle)
 
         Dim psPanel As Forms.Panel = New System.Windows.Forms.Panel()
