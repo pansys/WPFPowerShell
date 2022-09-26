@@ -14,7 +14,7 @@
         <TabControl>
             <TabItem Header="First">
                 <Grid Background="#FF595454">
-                    <WindowsFormsHost x:Name="winFormsHost"  />
+                    <WindowsFormsHost x:Name="winFormsHost" Panel.ZIndex="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Second">
