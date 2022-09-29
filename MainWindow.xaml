@@ -11,8 +11,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TabControl>
-            <TabItem Header="First">
+        <TabControl x:Name="tabControl">
+            <TabItem x:Name="tabItem1" Header="First">
                 <Grid Background="#FF595454">
                     <WindowsFormsHost x:Name="winFormsHost" Panel.ZIndex="1"/>
                 </Grid>
